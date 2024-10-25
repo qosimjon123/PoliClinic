@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY_APP', '')
+SECRET_KEY = os.environ.get('SECRETKEYAPP', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -77,9 +77,9 @@ WSGI_APPLICATION = 'policlinic.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.environ.get('MYSQL_DATABASE', ''),  # Измените на переменную окружения
-        'USER': os.environ.get('MYSQL_USER', ''),  # Измените на переменную окружения
-        'PASSWORD': os.environ.get('MYSQL_PASSWORD', ''),  # Измените на переменную окружения
+        'NAME': os.environ.get('MYSQLDATABASE', ''),  # Измените на переменную окружения
+        'USER': os.environ.get('MYSQLUSER', ''),  # Измените на переменную окружения
+        'PASSWORD': os.environ.get('MYSQLPASSWORD', ''),  # Измените на переменную окружения
         'HOST': 'db',  # Используйте имя сервиса
         'PORT': '3306',
     }
@@ -132,3 +132,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+
+
